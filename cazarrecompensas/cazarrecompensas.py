@@ -1,27 +1,18 @@
 import reflex as rx 
+from juego.personajes import personajes_aleatorios
 class State(rx.State):
-    count: int = 0
+    personaje = ""
 
-    def increment(self):
-        self.count += 1
-
-    def decrement(self):
-        self.count -= 1
+    def generar_personaje(self):
+        self.personaje = personajes_aleatorios()
+    
+    
 def index():
     return rx.hstack(
-        rx.progress(value=69),
         rx.button(
-            "Decrement",
-            color_scheme="ruby",
-            on_click=State.decrement,
+            on_click=State.generar_personaje,
         ),
-        rx.heading(State.count, font_size="2em"),
-        rx.button(
-            "Increment",
-            color_scheme="grass",
-            on_click=State.increment,
-        ),
-        spacing="1",
-    )
+        rx.heading(State.personaje, font_size="2em"),
+        )
 app = rx.App()
 app.add_page(index)
