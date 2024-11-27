@@ -21,7 +21,7 @@ def index():
             color_scheme="grass",
             on_click=State.increment,
         ),
-        spacing="4",
+        spacing="1",
     )
 app = rx.App()
 app.add_page(index)

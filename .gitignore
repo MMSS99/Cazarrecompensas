@@ -14,7 +14,8 @@ venv/
 
 # Built Visual Studio Code Extensions
 *.vsix
-
+#Venv
+.venv/
 ### Reflex
 *.db
 .web
