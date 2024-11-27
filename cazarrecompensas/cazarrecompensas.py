@@ -8,11 +8,26 @@ class State(rx.State):
     
     
 def index():
-    return rx.hstack(
+    return rx.vstack(
+
+        rx.image(
+            src="pj" + State.personaje + ".jpg",
+            width="335px",
+            height="576px",
+            border="5px solid #555"
+        ),
+
+        rx.heading(
+            State.personaje, 
+            font_size="2em"
+        ),
+        
         rx.button(
             on_click=State.generar_personaje,
         ),
-        rx.heading(State.personaje, font_size="2em"),
-        )
+
+        align="center",
+        direction="column"
+    )
 app = rx.App()
 app.add_page(index)
