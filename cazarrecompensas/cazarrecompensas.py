@@ -23,7 +23,9 @@ def index():
         ),
         
         rx.button(
+            "Nuevo Personaje",
             on_click=State.generar_personaje,
+            color_scheme="tomato"
         ),
 
         align="center",
