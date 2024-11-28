@@ -1,6 +1,4 @@
-import random
-
-personajes = {
+PERSONAJES = {
         "Susan": {"pelo": "rubio", "Entradas": False, "ojos": "marron", "gafas": False, "sombrero": False, "barba": False, "bigote": False, "pendientes": False, "Sexo": "Mujer"},
         "Claire": {"pelo": "pelirrojo", "Entradas": False, "ojos": "marron", "gafas": True, "sombrero": True, "barba": False, "bigote": False, "pendientes": True, "Sexo": "Mujer"},
         "David": {"pelo": "rubio", "Entradas": False, "ojos": "marron", "gafas": False, "sombrero": False, "barba": True, "bigote": False, "pendientes": False, "Sexo": "Hombre"},
@@ -27,7 +25,4 @@ personajes = {
         "Peter": {"pelo": "rubio", "Entradas": False, "ojos": "azul", "gafas": False, "sombrero": False, "barba": False, "bigote": False, "pendientes": False, "Sexo": "Hombre"},
     }
 
-def personajes_aleatorios():
-    
-    return random.choice(list(personajes.keys()))
 
