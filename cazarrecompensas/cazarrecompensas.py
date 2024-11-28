@@ -18,12 +18,16 @@ def action_bar() -> rx.Component:
         rx.input(
             value=State.caracteristica,
             on_change=State.actualizar_caracteristica,
-            placeholder="Pregúntame sobre el personaje"
+            placeholder="Pregúntame sobre el personaje",
+            radius="small",
+            width="30%",
         ),
         rx.button(
             "Comprobar",
             on_click=State.actualizar_caracteristicavisor
-            )
+        ),
+        justify="center",
+        width="75%"
     )
 def index():
     return rx.box(
@@ -67,7 +71,8 @@ def index():
         ),
         background="center/cover url('fondoprueba.jpg')",
         width="100%",
-        height="100%",
+        height="100vh",
+        align="center"
     )
 
 
