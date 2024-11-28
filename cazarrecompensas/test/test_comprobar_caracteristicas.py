@@ -2,7 +2,7 @@ import pytest
 from cazarrecompensas.juego.comprobador_caracteristicas import comprobar_caracteristicas
 
 @pytest.mark.parametrize ("Personaje, Caracteristica, Resultado", 
-                          [("Susan", "pelo", "rubio"),
+                          [("Susan", "pelo", "blanco"),
                            ("Claire", "ojos", "marron"),
                            ("Joe", "gafas", True),
                            ("Alfred", "ojos", "azul"),
