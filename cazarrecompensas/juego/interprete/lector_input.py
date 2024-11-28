@@ -18,7 +18,7 @@ def lector_entrada(entrada: str):
             negativo = True
 
     if clave and not valor:
-        valor.append(negativo)
+        valor.append(True)
 
     return clave, valor, negativo
 
