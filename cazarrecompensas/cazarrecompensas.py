@@ -9,14 +9,18 @@ class State(rx.State):
     
 def index():
     return rx.vstack(
-
-        rx.image(
-            src="pj" + State.personaje + ".jpg",
-            width="335px",
-            height="576px",
-            border="5px solid #555"
+        rx.cond(
+            State.personaje != "",
+            rx.image(
+                src=f"pj{State.personaje}.jpg",
+                width="335px",
+                height="576px",
+                border="5px solid #555"
+            ),
+            rx.text(
+                "Selecciona un personaje", font_size="2em"
+            ),
         ),
-
         rx.heading(
             State.personaje, 
             font_size="2em"
@@ -29,7 +33,11 @@ def index():
         ),
 
         align="center",
-        direction="column"
+        direction="column",
+        style={
+            "background_color": "lightblue",
+            "height": "100vh"
+        }
     )
 app = rx.App()
 app.add_page(index)
