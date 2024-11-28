@@ -9,6 +9,9 @@
 venv/
 */venv/*
 
+#Coverage
+.coverage
+
 # Local History for Visual Studio Code
 .history/
 
