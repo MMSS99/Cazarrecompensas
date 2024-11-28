@@ -1,5 +1,5 @@
 import reflex as rx 
-from .juego import personajes, personajes_aleatorios
+from .juego import personajes_aleatorios
 class State(rx.State):
     personaje = ""
 
