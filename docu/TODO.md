@@ -5,6 +5,6 @@
 ### quien_es_quien (lógica python pura)
 >>>quien_es_quien.py = CREAR vista del juego
 >>>qienState.py = CREAR State para quien_es_quien. 
->>>regularizar_atributos.py = diccionario con posibles traducciones para atributos (dict.values y devuelve la key del value shareado)
->>>comprobar_atributos.py = compara el atributo sacado de dictAtrib con PJ y devuelve TRUE o FALSE dependiendo del valor. 
+>>>lector_input = leer el input y obtener las variables de interés
+>>>regularizar_atributos.py = tomar sinonimos y convertir (dict.values y devuelve la key del value shareado)
 
