@@ -12,6 +12,9 @@ venv/
 #Coverage
 .coverage
 
+#Pytest
+.pytest_cache
+
 # Local History for Visual Studio Code
 .history/
 
