@@ -1,5 +1,6 @@
 import reflex as rx 
 from .juego import personajes_aleatorios
+from .juego.comprobador_caracteristicas import comprobar_caracteristicas
 class State(rx.State):
     personaje=""
     caracteristica = ""
@@ -9,7 +10,7 @@ class State(rx.State):
     def actualizar_caracteristica(self, caracteristica):
         self.caracteristica = caracteristica
     def actualizar_caracteristicavisor (self):
-        self.caracteristica_visor = self.caracteristica
+        self.caracteristica_visor = comprobar_caracteristicas(self.personaje, self.caracteristica)
     
     
 def action_bar() -> rx.Component:
@@ -17,46 +18,56 @@ def action_bar() -> rx.Component:
         rx.input(
             value=State.caracteristica,
             on_change=State.actualizar_caracteristica,
-            placeholder="Inserta una caracteristica"
+            placeholder="Pregúntame sobre el personaje"
         ),
         rx.button(
-            "Comprobar caracteristica",
+            "Comprobar",
             on_click=State.actualizar_caracteristicavisor
             )
     )
 def index():
-    return rx.vstack(
-        rx.cond(
-            State.personaje != "",
-            rx.image(
-                src=f"pj{State.personaje}.jpg",
-                width="335px",
-                height="576px",
-                border="5px solid #555"
+    return rx.box(
+        rx.vstack(
+            rx.cond(
+                State.personaje != "",
+                rx.image(
+                    src=f"pj{State.personaje}.jpg",
+                    height="300px",
+                    border="5px solid #555"
+                ),
+                rx.text(
+                    "Selecciona un personaje", font_size="2em"
+                ),
             ),
-            rx.text(
-                "Selecciona un personaje", font_size="2em"
+            rx.box(
+                rx.heading(
+                f"La respuesta a tu pregunta es... {State.caracteristica_visor}",
+                font_size="2em",
+                align="center"
+                ),
+
+                background="radial-gradient(circle, rgba(172,31,8,0.37923672887123594) 0%, rgba(255,0,66,0.3008053563222164) 100%)",
+                border_radius="20px",
+                width="40%",
+                margin="12px",
+                padding="12px",
+
             ),
-        ),
-        rx.heading(
-            State.personaje, 
-            State.caracteristica_visor,
-            font_size="2em"
-        ),
+            
+            rx.button(
+                "Nuevo Personaje",
+                on_click=State.generar_personaje,
+                color_scheme="tomato"
+            ),
         
-        rx.button(
-            "Nuevo Personaje",
-            on_click=State.generar_personaje,
-            color_scheme="tomato"
+            action_bar(),
+            align="center",
+            direction="column",
+            
         ),
-    
-        action_bar(),
-        align="center",
-        direction="column",
-        style={
-            "background_color": "lightblue",
-            "height": "100vh"
-        }
+        background="center/cover url('fondoprueba.jpg')",
+        width="100%",
+        height="100%",
     )
 
 
