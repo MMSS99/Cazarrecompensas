@@ -1,12 +1,12 @@
 import pytest
 from cazarrecompensas.juego.comprobador_caracteristicas import comprobar_caracteristicas
 
-@pytest.mark.parametrize ("Personaje, Caracteristica, Resultado", 
-                          [("Susan", "pelo", "blanco"),
-                           ("Claire", "ojos", "marron"),
-                           ("Joe", "gafas", True),
-                           ("Alfred", "ojos", "azul"),
-                           ("Susan", "caracteristicainexistente", False)])
+@pytest.mark.parametrize ("personaje, entrada, resultado", 
+                          [("Susan", "Tiene el pelo blanco", "Si"),
+                           ("Susan", "Tiene el pelo negro", "No"),
+                           ("Susan", "Tiene barba", "No"),
+                           ("Susan", "No tiene pendientes", "Si")
+                           ])
 
-def test_comprobar_caracteristicas(Personaje, Caracteristica, Resultado):
-    assert comprobar_caracteristicas(Personaje, Caracteristica) == Resultado
+def test_comprobar_caracteristicas(personaje, entrada, resultado):
+    assert comprobar_caracteristicas(personaje, entrada) == resultado
