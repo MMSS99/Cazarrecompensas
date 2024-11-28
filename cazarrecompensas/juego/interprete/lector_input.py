@@ -17,5 +17,8 @@ def lector_entrada(entrada: str):
         if palabra.lower() == "no":
             negativo = True
 
+    if clave and not valor:
+        valor.append(negativo)
+
     return clave, valor, negativo
 
