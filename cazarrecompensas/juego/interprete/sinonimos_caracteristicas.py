@@ -1,6 +1,6 @@
 SINONIMOS_CLAVES = {
     #keys
-    ("cabello", "cabellera", "melena", "vello", "pelo") : "pelo",
+    ("cabello", "cabellera", "melena", "vello", "pelo", "rubio", "pelirrojo", "castaño", "moreno") : "pelo",
     ("calvo", "calvicie", "falta de pelo", "pelado", "calvorota", "entrada", "entradas") : "entradas",
     ("iris", "pupila", "retina", "ojo", "ojos") : "ojos",
     ("anteojos", "lentes", "gafa", "gafas") : "gafas",
