@@ -12,12 +12,12 @@ SINONIMOS_CLAVES = {
 }
 
 SINONIMOS_VALORES = {
-    ("canas", "canoso", "gris", "blancos", "blanco") : "blanco",
+    ("canas", "canoso", "gris", "blancos", "blanco", "plateado") : "blanco",
     ("naranja", "pelirrojo", "bermejo", "zanahorio", "rojos", "rojo") : "rojo",
     ("rubio", "dorado", "amarillo", "amarillos") : "amarillo",
     ("oscuro", "moreno", "negros", "negro") : "negro",
     ("castaño", "pardo", "marrones", "marron") : "marron",
     ("celeste", "azulado", "azules", "azul") : "azul",
-    ("masculino", "varón", "señor", "varon", "chico", "hombre") : "hombre",
-    ("femenino", "fémina", "señora", "femina", "chica", "mujer") : "mujer"
+    ("masculino", "masculina", "varón", "varon", "señor", "varon", "chico", "hombre") : "hombre",
+    ("femenino", "femenina", "fémina", "femina", "señora", "femina", "chica", "mujer") : "mujer"
 }
