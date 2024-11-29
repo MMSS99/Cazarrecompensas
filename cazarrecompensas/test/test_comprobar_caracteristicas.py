@@ -5,7 +5,9 @@ from cazarrecompensas.juego.comprobador_caracteristicas import comprobar_caracte
                           [("Susan", "Tiene el pelo blanco", "Si"),
                            ("Susan", "Tiene el pelo negro", "No"),
                            ("Susan", "Tiene barba", "No"),
-                           ("Susan", "No tiene pendientes", "Si")
+                           ("Susan", "No tiene pendientes", "Si"),
+                           ("David", "¿Es rubio?", "Si"),
+                           ("David", "¿Es pelirrojo?", "No")
                            ])
 
 def test_comprobar_caracteristicas(personaje, entrada, resultado):
