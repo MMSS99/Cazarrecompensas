@@ -1,11 +1,13 @@
 from .estandarizador_valores import estandarizador_valores
 from .sinonimos_caracteristicas import SINONIMOS_CLAVES, SINONIMOS_VALORES
+from .limpiador_entrada import limpiador_entrada
 
 def lector_entrada(entrada: str):
     negativo = False
     clave = []
     valor = []
-    for palabra in entrada.split(" "):
+    entrada_limpia = limpiador_entrada(entrada)
+    for palabra in entrada_limpia.split(" "):
         for clavedict in SINONIMOS_CLAVES.keys():
             if palabra in clavedict:
                 clave.append(estandarizador_valores(palabra))
