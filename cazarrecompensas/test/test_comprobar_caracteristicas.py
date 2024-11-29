@@ -7,7 +7,9 @@ from cazarrecompensas.juego.comprobador_caracteristicas import comprobar_caracte
                            ("Susan", "Tiene barba", "No"),
                            ("Susan", "No tiene pendientes", "Si"),
                            ("David", "¿Es rubio?", "Si"),
-                           ("David", "¿Es pelirrojo?", "No")
+                           ("David", "¿Es pelirrojo?", "No"),
+                           ("David", "Vallecas", "No sé cómo responder a eso"),
+                           ("David", "5429875", "No sé cómo responder a eso")
                            ])
 
 def test_comprobar_caracteristicas(personaje, entrada, resultado):
