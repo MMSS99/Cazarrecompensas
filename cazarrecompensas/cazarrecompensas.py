@@ -12,10 +12,10 @@ def index():
                 border_radius="20px",
                 margin="12px",
                 padding="12px",
-                opacity=0.5,
-                _hover={
-                    "opacity": 1,
-                },
+
+                opacity=State.opacidadboton_areapruebas,
+                on_mouse_enter=State.masopacidad,
+                on_mouse_leave=State.menosopacidad
             ),
 
             align="center"
