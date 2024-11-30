@@ -1,19 +1,6 @@
-import reflex as rx 
-from .juego import personajes_aleatorios
-from .juego.comprobador_caracteristicas import comprobar_caracteristicas
-from .areadepruebas.areapruebas import areapruebas
-class State(rx.State):
-    personaje=""
-    caracteristica = ""
-    caracteristica_visor = ""
-    def generar_personaje(self):
-        self.personaje = personajes_aleatorios()
-    def actualizar_caracteristica(self, caracteristica):
-        self.caracteristica = caracteristica
-    def actualizar_caracteristicavisor (self):
-        self.caracteristica_visor = comprobar_caracteristicas(self.personaje, self.caracteristica)
-    
-    
+import reflex as rx
+from .state_areapruebas import Statepruebas as State
+
 def action_bar() -> rx.Component:
     return rx.hstack(
         rx.input(
@@ -30,13 +17,14 @@ def action_bar() -> rx.Component:
         justify="center",
         width="75%"
     )
-def index():
+
+def areapruebas():
     return rx.box(
         rx.vstack(
             rx.cond(
                 State.personaje != "",
                 rx.image(
-                    src=f"pj{State.personaje}.jpg",
+                    src=f"../pj{State.personaje}.jpg",
                     height="300px",
                     border="5px solid #555"
                 ),
@@ -72,19 +60,17 @@ def index():
         ),
 
         rx.button(
-            "Ir al menú",
+            "Volver al menú",
             on_click=rx.redirect(
-                "/areapruebas"
+                "/"
                 ),
         ),
-        background="center/cover url('fondoprueba.jpg')",
+        background="center/cover url('../fondoprueba.jpg')",
         width="100%",
         height="100vh",
         align="center"
     )
 
 
-
 app = rx.App()
-app.add_page(index)
 app.add_page(areapruebas)
