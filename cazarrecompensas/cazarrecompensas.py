@@ -7,7 +7,7 @@ def index():
         rx.vstack(
             rx.button(
                 "🚧 Ir al área de pruebas 🚧",
-                on_click=rx.redirect("/areapruebas"),
+                on_click= State.salida("/areapruebas"),
                 background_image="url('pruebas_amarillonegro.jpeg')",
                 border_radius="20px",
                 margin="12px",
@@ -21,8 +21,9 @@ def index():
             align="center"
         ),
 
-
+        on_mount=State.entrada,
         background="center/cover url('fondoprueba.jpg')",
+        filter= f"blur({State.blursalidaentrada}px)",
         width="100%",
         height="100vh",
         align="center"

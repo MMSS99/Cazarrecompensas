@@ -61,11 +61,12 @@ def areapruebas():
 
         rx.button(
             "Volver al menú",
-            on_click=rx.redirect(
-                "/"
-                ),
+            on_click=State.salida("/"),
         ),
+
+        on_mount=State.entrada,
         background="center/cover url('../fondoprueba.jpg')",
+        filter= f"blur({State.blursalidaentrada}px)",
         width="100%",
         height="100vh",
         align="center"
