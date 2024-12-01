@@ -5,6 +5,15 @@ from .areadepruebas.areapruebas import areapruebas
 def index():
     return rx.box(
         rx.vstack(
+            rx.image(
+                src="/cazarecompensas.png"
+            ),
+            rx.button(
+                background_image="url('btnNuevaPartida.png')",
+                background_color="transparent",
+                width="380px",
+                height="60px"
+            ),
             rx.button(
                 "🚧 Ir al área de pruebas 🚧",
                 on_click= State.salida("/areapruebas"),
