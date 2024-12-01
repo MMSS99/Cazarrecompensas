@@ -30,6 +30,18 @@ def index():
                 on_mouse_enter=State.masopacidad,
                 on_mouse_leave=State.menosopacidad
             ),
+            rx.hstack(
+                rx.image(
+                    src="/github.png",
+                    width="16px",
+                    height="16px"
+                ),
+                rx.text(
+                    "Escrito por ", rx.link("MMSS99", href="https://github.com/MMSS99"), " y ", rx.link("Desteveco", href="https://github.com/Desteveco"), " en Reflex.", color_scheme="brown", high_contrast=True,
+                ),
+
+                align="center"
+            ),
 
             align="center"
         ),
