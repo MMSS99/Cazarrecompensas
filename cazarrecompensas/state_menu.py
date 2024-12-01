@@ -30,6 +30,14 @@ class State_menu(rx.State):
             self.blursalidaentrada += 1
             yield
         yield rx.redirect(direccion)
+
+    scalebtnnuevapartida=1.0
+
+    def botonnuevapartidadentro(self):
+        self.scalebtnnuevapartida = 1.07
+
+    def botonnuevapartidafuera(self):
+        self.scalebtnnuevapartida = 1.0
             
 
 

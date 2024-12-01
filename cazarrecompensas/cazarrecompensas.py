@@ -12,7 +12,11 @@ def index():
                 background_image="url('btnNuevaPartida.png')",
                 background_color="transparent",
                 width="380px",
-                height="60px"
+                height="60px",
+
+                scale= State.scalebtnnuevapartida,
+                on_mouse_enter= State.botonnuevapartidadentro,
+                on_mouse_leave=  State.botonnuevapartidafuera
             ),
             rx.button(
                 "🚧 Ir al área de pruebas 🚧",
