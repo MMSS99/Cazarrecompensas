@@ -2,8 +2,6 @@ import reflex as rx
 from .personajes import PERSONAJES
 from ..areadepruebas.areapruebas import action_bar
 
-
-@rx.page(on_load=State.get_player)
 def juego():
     caras = PERSONAJES.keys()
     return rx.vstack( 
