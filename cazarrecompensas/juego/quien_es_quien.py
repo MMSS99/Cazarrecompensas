@@ -27,6 +27,7 @@ def juego():
 
         ),
         action_bar(),
+        rx.text(State.personaje_a_adivinar),
         padding="10px",
         display="flex",
         align="center",
