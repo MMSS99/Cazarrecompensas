@@ -9,7 +9,7 @@ SINONIMOS_CLAVES = {
     ("mostacho", "bigote") : "bigote",
     ("joyeria", "accesorios", "pendiente", "pendientes") : "pendientes",
     ("genero", "apariencia", "sexo") : "sexo",
-    ("carrillo", "moflete", "pomulo", "cachete") : "mejilla",
+    ("carrillo", "moflete", "pomulo", "cachete", "carrillo", "carrillos", "mofletes", "pomulos", "cachetes", "mejillas", "mejilla") : "mejilla",
     ("boca", "labios", "labio") : "boca",
     ("nariz", "napia") : "nariz",
     ("oreja", "orejas") : "orejas",
