@@ -18,14 +18,13 @@ SINONIMOS_CLAVES = {
 
 SINONIMOS_VALORES = {
     ("canas", "canoso", "gris", "blancos", "blanco", "plateado") : "blanco",
-    ("naranja", "pelirrojo", "bermejo", "zanahorio", "rojos", "rojo") : "rojo",
+    ("naranja", "pelirrojo", "bermejo", "zanahorio", "rojos", "rojo", "rosado", "rosada", "rosados", "rosadas", "sonrosadas", "sonrosados", "roja", "rojas") : "rojo",
     ("rubio", "dorado", "amarillo", "amarillos") : "amarillo",
     ("oscuro", "moreno", "negros", "negro") : "negro",
     ("castaño", "pardo", "marrones", "marron") : "marron",
     ("celeste", "azulado", "azules", "azul") : "azul",
     ("masculino", "masculina", "varón", "varon", "señor", "varon", "chico", "hombre") : "hombre",
     ("femenino", "femenina", "fémina", "femina", "señora", "femina", "chica", "mujer") : "mujer",
-    ("rosado", "rosada", "rosados", "rosadas", "sonrosadas", "sonrosados") : "rosadas",
     ("pálidas", "pálida", "palidas", "palida", "normales", "normal", "estándar", "mediana", "mediano") : "normal",
     ("grande", "ancho", "gordo", "ancha", "anchas", "gordos", "anchos", "gorda", "gordas", "redondo", "redonda", "rechoncho", "rechoncha") : "grande",
     ("pequeño", "pequeña", "pequeños", "pequeñas", "delgado", "delgada", "delgados", "delgadas") : "pequeña",
