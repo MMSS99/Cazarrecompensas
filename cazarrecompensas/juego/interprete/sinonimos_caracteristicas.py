@@ -26,8 +26,7 @@ SINONIMOS_VALORES = {
     ("masculino", "masculina", "varón", "varon", "señor", "varon", "chico", "hombre") : "hombre",
     ("femenino", "femenina", "fémina", "femina", "señora", "femina", "chica", "mujer") : "mujer",
     ("rosado", "rosada", "rosados", "rosadas", "sonrosadas", "sonrosados") : "rosadas",
-    ("pálidas", "pálida", "palidas", "palida", "apagadas", "apagados") : "palidas",
-    ("normales", "normal", "estándar", "mediana", "mediano") : "normal",
+    ("pálidas", "pálida", "palidas", "palida", "normales", "normal", "estándar", "mediana", "mediano") : "normal",
     ("grande", "ancho", "gordo", "ancha", "anchas", "gordos", "anchos", "gorda", "gordas", "redondo", "redonda", "rechoncho", "rechoncha") : "grande",
     ("pequeño", "pequeña", "pequeños", "pequeñas", "delgado", "delgada", "delgados", "delgadas") : "pequeña",
 
