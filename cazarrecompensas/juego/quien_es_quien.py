@@ -1,6 +1,6 @@
 import reflex as rx
 from .state_juego import State_juego as State
-from .personajes import PERSONAJES
+from .partida.personajes import PERSONAJES
 from ..areadepruebas.areapruebas import action_bar
 
 def juego():

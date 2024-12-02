@@ -3,7 +3,7 @@ import asyncio
 import random
 import time
 from ..juego import personajes_aleatorios
-from ..juego.comprobador_caracteristicas import comprobar_caracteristicas
+from ..juego.partida.comprobador_caracteristicas import comprobar_caracteristicas
 
 class Statepruebas(rx.State):
     personaje=""

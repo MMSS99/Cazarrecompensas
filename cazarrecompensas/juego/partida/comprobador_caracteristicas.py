@@ -1,5 +1,5 @@
 from .personajes import PERSONAJES
-from .interprete.lector_input import lector_entrada
+from ..interprete.lector_input import lector_entrada
 
 def comprobar_caracteristicas(personaje : str, entrada : str):
     try:
