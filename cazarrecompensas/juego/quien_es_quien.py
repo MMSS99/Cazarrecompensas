@@ -1,21 +1,22 @@
 import reflex as rx
+from .state_juego import State_juego as State
 from .personajes import PERSONAJES
 from ..areadepruebas.areapruebas import action_bar
 
 def juego():
-    caras = PERSONAJES.keys()
     return rx.vstack( 
         
         rx.box(
             rx.grid(
-                *[
-                    rx.box(
-                        rx.image(src=f"../pj{cara}.jpg", width="100%", height="100%"),
+                rx.foreach(
+                    State.listapersonajes,
+                    lambda i:rx.box(
+                        rx.image(src=f"../pj{i}.jpg", width="100%", height="100%"),
                     
                     
-                    )
-                    for cara in caras
-                ],
+                    ),
+                    
+                ),
                 columns="8",
                 gap="5px",
                 align="center",
