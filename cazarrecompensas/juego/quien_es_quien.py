@@ -28,6 +28,7 @@ def juego():
         ),
         action_bar(),
         rx.text(State.personaje_a_adivinar),
+        on_mount=State.nuevapartida,
         padding="10px",
         display="flex",
         align="center",
