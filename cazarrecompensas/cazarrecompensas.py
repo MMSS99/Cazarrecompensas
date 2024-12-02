@@ -1,6 +1,7 @@
 import reflex as rx 
 from .state_menu import State_menu as State
 from .areadepruebas.areapruebas import areapruebas
+from .juego.quien_es_quien import juego
 
 def index():
     return rx.box(
@@ -9,6 +10,7 @@ def index():
                 src="/cazarecompensas.png"
             ),
             rx.button(
+                on_click= State.salida("/juego"),
                 background_image="url('btnNuevaPartida.png')",
                 background_color="transparent",
                 width="380px",
@@ -59,3 +61,4 @@ def index():
 app = rx.App()
 app.add_page(index)
 app.add_page(areapruebas)
+app.add_page(juego)

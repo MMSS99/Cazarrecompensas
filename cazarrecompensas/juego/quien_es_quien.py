@@ -1,4 +1,5 @@
 import reflex as rx
 
-class State(rx.State):
+def juego():
+    return rx.text("TRABAJA")
     
