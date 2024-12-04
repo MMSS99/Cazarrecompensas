@@ -22,6 +22,12 @@ class State_juego(rx.State):
         self.actualizar_entrada(self.entrada)
         self.listapersonajes=comparador_caracteristicas(self.listapersonajes, self.personaje_a_adivinar, self.entrada)
         self.entrada = ''
+    
+    def adivinar(self, personaje):
+        if personaje == self.personaje_a_adivinar:
+            return rx.window_alert(f"Has acertado, el personaje era {personaje}")
+        else:
+            return rx.window_alert(f"Has metido la pata, el personaje era {self.personaje_a_adivinar}")
 
     blursalidaentrada=100
 

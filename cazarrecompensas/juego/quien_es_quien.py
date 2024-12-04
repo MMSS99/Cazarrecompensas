@@ -26,7 +26,7 @@ def juego():
                     rx.foreach(
                         State.listapersonajes,
                         lambda i:rx.box(
-                            rx.image(src=f"../pj{i}.jpg", width="100%", height="100%"),
+                            rx.image(src=f"../pj{i}.jpg", on_click=State.adivinar(i),width="100%", height="100%"),
                         ), 
                     ),
                 columns="8",
