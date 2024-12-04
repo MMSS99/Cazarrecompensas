@@ -11,13 +11,15 @@ class State_juego(rx.State):
     entrada = "" #Cablear al input de la action bar como en areadepruebas
     
     
-    def actualizar_caracteristicavisor (self):
-        self.caracteristica_visor = comprobar_caracteristicas(self.personaje_a_adivinar, self.caracteristica)
+    def actualizar_entrada (self, entrada):
+        self.entrada = entrada
 
     def nuevapartida(self):
         self.listapersonajes=personajes_aleatorios()
         self.personaje_a_adivinar=random.choice(personajes_aleatorios())
 
     def comparar_caracetristicas(self):
+        self.actualizar_entrada(self.entrada)
         self.listapersonajes=comparador_caracteristicas(self.listapersonajes, self.personaje_a_adivinar, self.entrada)
+        self.entrada = ''
 

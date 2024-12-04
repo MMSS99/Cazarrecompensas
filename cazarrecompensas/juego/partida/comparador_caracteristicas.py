@@ -12,4 +12,5 @@ def comparador_caracteristicas(listadepj, pjaadivinar, entrada):
         else:
             listacambiada.append(personaje)
     
+    print (listacambiada)
     return listacambiada

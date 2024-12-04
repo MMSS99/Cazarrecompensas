@@ -1,7 +1,22 @@
 import reflex as rx
 from .state_juego import State_juego as State
-from ..areadepruebas.areapruebas import action_bar
 
+def action_bar() -> rx.Component:
+    return rx.hstack(
+        rx.input(
+            value=State.entrada,
+            on_change=State.actualizar_entrada,
+            placeholder="Pregúntame sobre el personaje",
+            radius="small",
+            width="30%",
+        ),
+        rx.button(
+            "Comprobar",
+            on_click=State.comparar_caracetristicas
+        ),
+        justify="center",
+        width="75%"
+    )
 
 def juego():
     return rx.box(        
