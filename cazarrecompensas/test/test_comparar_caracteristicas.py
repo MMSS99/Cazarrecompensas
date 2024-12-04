@@ -5,6 +5,7 @@ from ..juego.partida.comparador_caracteristicas import comparador_caracteristica
                           [(["Susan", "Herman", "Paul", "Eric"], "Peter", "Tiene el pelo blanco", ["Susan", "HermanNO", "Paul", "EricNO"]),
                            (["Susan", "Herman", "Paul", "Eric"], "Bill", "Tiene el pelo blanco", ["SusanNO", "Herman", "PaulNO", "Eric"]),
                            (["Susan", "Herman", "Bill", "Richard"], "Tom", "No tiene barba", ["Susan", "Herman", "BillNO", "RichardNO"]),
+                           (["Susan", "Herman", "Bill", "Richard", "EricNO"], "Tom", "No tiene barba", ["Susan", "Herman", "BillNO", "RichardNO", "EricNO"]),
                            ])
 
 def test_comparar_caracteristicas(listapj, pjaadivinar, entrada, listaresultante):
