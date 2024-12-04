@@ -8,14 +8,15 @@ def action_bar() -> rx.Component:
             on_change=State.actualizar_entrada,
             placeholder="Pregúntame sobre el personaje",
             radius="small",
-            width="30%",
+            min_width="40%",
         ),
         rx.button(
             "Comprobar",
             on_click=State.comparar_caracetristicas
         ),
         justify="center",
-        width="75%"
+        align="center",
+        min_width="75%"
     )
 
 def juego():
@@ -38,7 +39,7 @@ def juego():
                     ),
                 
                 rx.box(
-                    rx.heading(
+                    rx.heading( #A reutilizar para crear log de preguntas
                     f"La respuesta a tu pregunta es... NO FUNCIONANDO",
                     font_size="2em",
                     align="center"
@@ -63,7 +64,11 @@ def juego():
                 rx.text(
                     f"{State.correctoincorrecto}, el personaje a adivinar era..."
                 ),
-                rx.image(src=f"../pj{State.personaje_a_adivinar}.jpg")
+                rx.image(src=f"../pj{State.personaje_a_adivinar}.jpg"),
+                min_width="100vh",
+                padding="20px",
+                align="center",
+                direction="column"
             ),
         ),
         rx.button(
@@ -74,6 +79,8 @@ def juego():
         background="center/cover url('../fondoprueba.jpg')",
         filter= f"blur({State.blursalidaentrada}px)",
         height="100vh",
+        direction="column",
+        align="center"
 
     )
 
