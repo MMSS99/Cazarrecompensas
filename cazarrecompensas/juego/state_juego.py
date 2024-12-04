@@ -23,15 +23,20 @@ class State_juego(rx.State):
         self.listapersonajes=comparador_caracteristicas(self.listapersonajes, self.personaje_a_adivinar, self.entrada)
         self.entrada = ''
     
+    enpartida = True
+    correctoincorrecto = ""
+
     def adivinar(self, personaje):
+        self.enpartida = False
         if personaje == self.personaje_a_adivinar:
-            return rx.window_alert(f"Has acertado, el personaje era {personaje}")
+            self.correctoincorrecto = "Correcto"
         else:
-            return rx.window_alert(f"Has metido la pata, el personaje era {self.personaje_a_adivinar}")
+            self.correctoincorrecto = "Has metido la pata"
 
     blursalidaentrada=100
 
     async def entradaapagina(self):
+        self.enpartida = True
         while self.blursalidaentrada >= 1:
             time.sleep(0.01)
             self.blursalidaentrada -= 1
@@ -43,4 +48,5 @@ class State_juego(rx.State):
             self.blursalidaentrada += 1
             yield
         yield rx.redirect(direccion)
+
 
