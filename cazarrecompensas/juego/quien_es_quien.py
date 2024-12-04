@@ -37,7 +37,7 @@ def juego():
             
             rx.box(
                 rx.heading(
-                f"La respuesta a tu pregunta es... {State.caracteristica_visor}",
+                f"La respuesta a tu pregunta es... NO FUNCIONANDO",
                 font_size="2em",
                 align="center"
                 ),
@@ -48,9 +48,7 @@ def juego():
 
         
             action_bar(),
-            rx.text(State.personaje_a_adivinar),
             on_mount=State.nuevapartida,
-            
             width="60vw",
             height="60vh",
             margin="auto",
@@ -59,7 +57,13 @@ def juego():
             
             ),
         ),
+        rx.button(
+            "Volver al menú",
+            on_click=State.salida("/"),
+        ),
+        on_mount=State.entradaapagina,
         background="center/cover url('../fondoprueba.jpg')",
+        filter= f"blur({State.blursalidaentrada}px)",
         height="100vh",
 
     )
