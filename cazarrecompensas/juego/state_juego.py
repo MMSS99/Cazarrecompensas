@@ -7,9 +7,17 @@ from ..juego.partida.comparador_caracteristicas import comparador_caracteristica
 class State_juego(rx.State):
     listapersonajes=[]
     personaje_a_adivinar=""
-    caracteristica_visor = ""
     entrada = "" #Cablear al input de la action bar como en areadepruebas
+    contador_de_intentos = 0
     
+    def counter(self):
+        self.contador_de_intentos += 1
+    
+    def presionar_enter(self, event):
+        if event == 'Enter':
+            self.counter()
+            return self.comparar_caracetristicas() 
+        
     
     def actualizar_entrada (self, entrada):
         self.entrada = entrada
