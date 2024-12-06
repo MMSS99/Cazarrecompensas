@@ -11,6 +11,4 @@ def comparador_caracteristicas(listadepj, pjaadivinar, entrada):
                 listacambiada.append(str(personaje) + "NO")
         else:
             listacambiada.append(personaje)
-    
-    print (listacambiada)
     return listacambiada

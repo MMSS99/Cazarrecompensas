@@ -9,6 +9,8 @@ def action_bar() -> rx.Component:
             placeholder="Pregúntame sobre el personaje",
             radius="small",
             min_width="40%",
+            on_key_down=State.presionar_enter
+            
         ),
         rx.button(
             "Comprobar",
@@ -35,19 +37,11 @@ def juego():
                     columns="8",
                     gap="5px",
                     align="center",
+                    margin_bottom="20px",
                     
                     ),
                 
-                rx.box(
-                    rx.heading( #A reutilizar para crear log de preguntas
-                    f"La respuesta a tu pregunta es... NO FUNCIONANDO",
-                    font_size="2em",
-                    align="center"
-                    ),
-                max_height="100%",
-                align="center",
-                max_width="100vh"
-                ),
+                
 
             
                 action_bar(),
@@ -62,19 +56,29 @@ def juego():
             ),
             rx.vstack(
                 rx.text(
-                    f"{State.correctoincorrecto}, el personaje a adivinar era..."
+                    f"{State.correctoincorrecto}, el personaje a adivinar era...{State.personaje_a_adivinar}",
+
+                    font_size="1em"
                 ),
+                '''rx.text(
+                    f"Intentos: {State.contador_de_intentos}",
+                    font_size="1em"
+                )''',
                 rx.image(src=f"../pj{State.personaje_a_adivinar}.jpg"),
                 min_width="100vh",
                 padding="20px",
                 align="center",
                 direction="column"
             ),
-        ),
-        rx.button(
+
+            
+            ),
+            rx.button(
             "Volver al menú",
             on_click=State.salida("/"),
+            aling="center"
         ),
+        
         on_mount=State.entradaapagina,
         background="center/cover url('../fondoprueba.jpg')",
         filter= f"blur({State.blursalidaentrada}px)",
