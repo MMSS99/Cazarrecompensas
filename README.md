@@ -76,17 +76,42 @@ Recomendamos utilizar un entorno virtual para instalar y manejar las dependencia
 
 
 ## Implementación
-
-
-## Tecnologías y Herramientas utilizadas
+### Tecnologías y Herramientas utilizadas
 - Reflex
 - Python
+    - Pytest
 - Git
 - Markdown
+
 ### Backend
 El backend se desarrolló utilizando el framework Reflex. Sus principales características son:
 - **Gestor de preguntas y respuestas:** Con lógica para interpretar las preguntas del usuario y seleccionar una respuesta adecuada en base a las características de los personajes.
-- **API REST:** Comunicación entre el backend y el frontend mediante gestion de eventos diseñados para manejar las interacciones del juego.
+Lo primero que hacemos es lanzar el limpiador de entrada que deja la entrada de texto en minusculas y elimina espacios y signos de interrogacion
+```python
+    def limpiador_entrada(entrada : str):
+    return (''.join(caracter for caracter in entrada.lower() if caracter.isalpha() or caracter.isspace()).strip())
+```
+
+Despues comparamos las caracteristicas del imput con nuestros diccionarios y devolvemos la clave y el valor mas adecuados.
+
+```python
+def estandarizador_claves(termino):
+    for clave in SINONIMOS_CLAVES.keys():
+        for sinonimo in clave:
+            if termino.lower() == sinonimo:
+                return SINONIMOS_CLAVES[clave]
+            
+def estandarizador_valores(termino):
+    for clave in SINONIMOS_VALORES.keys():
+        for sinonimo in clave:
+            if termino.lower() == sinonimo:
+                return SINONIMOS_VALORES[clave]
+```
+Por último 
+
+
+
+- **Programación dirigida por eventos:** Comunicación entre el backend y el frontend mediante gestion de eventos diseñados para manejar las interacciones del juego.
 - **Validación:** Comprobación de entradas del usuario para evitar errores o datos inconsistentes.
 
 ### Frontend
