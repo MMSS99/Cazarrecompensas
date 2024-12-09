@@ -25,6 +25,7 @@ class State_juego(rx.State):
     def nuevapartida(self):
         self.listapersonajes=personajes_aleatorios()
         self.personaje_a_adivinar=random.choice(personajes_aleatorios())
+        self.contador_de_intentos = 0
 
     def comparar_caracetristicas(self):
         self.actualizar_entrada(self.entrada)

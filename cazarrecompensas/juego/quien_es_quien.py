@@ -60,10 +60,10 @@ def juego():
 
                     font_size="1em"
                 ),
-                '''rx.text(
+                rx.text(
                     f"Intentos: {State.contador_de_intentos}",
                     font_size="1em"
-                )''',
+                ),
                 rx.image(src=f"../pj{State.personaje_a_adivinar}.jpg"),
                 min_width="100vh",
                 padding="20px",
