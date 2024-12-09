@@ -25,8 +25,16 @@ def action_bar() -> rx.Component:
 
 def volver_al_menu() -> rx.Component:
     return rx.button(
-                    "Volver al menú",
                     on_click=State.salida("/"),
+
+                    background_image="url('../btnVolverAlMenu.png')",
+                    background_color="transparent",
+                    width="380px",
+                    height="60px",
+
+                    scale= State.scalebtnvolveralmenu,
+                    on_mouse_enter= State.botonvolveralmenudentro,
+                    on_mouse_leave=  State.botonvolveralmenufuera
                 ),
 
 def juego():

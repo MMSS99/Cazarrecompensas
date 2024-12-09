@@ -73,4 +73,12 @@ class State_juego(rx.State):
     def botonnuevapartidafuera(self):
         self.scalebtnnuevapartida = 1.0
 
+    scalebtnvolveralmenu=1.0
+
+    def botonvolveralmenudentro(self):
+        self.scalebtnvolveralmenu = 1.07
+
+    def botonvolveralmenufuera(self):
+        self.scalebtnvolveralmenu = 1.0
+
 
