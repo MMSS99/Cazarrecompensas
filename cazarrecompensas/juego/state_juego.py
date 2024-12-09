@@ -7,7 +7,7 @@ from ..juego.partida.comparador_caracteristicas import comparador_caracteristica
 class State_juego(rx.State):
     listapersonajes=[]
     personaje_a_adivinar=""
-    entrada = "" #Cablear al input de la action bar como en areadepruebas
+    entrada = ""
     contador_de_intentos = 0
     
     def counter(self):
@@ -34,6 +34,7 @@ class State_juego(rx.State):
     
     enpartida = True
     correctoincorrecto = ""
+    colorborder = "white"
 
     def reiniciar_partida(self):
         self.enpartida = True
@@ -43,8 +44,10 @@ class State_juego(rx.State):
         self.enpartida = False
         if personaje == self.personaje_a_adivinar:
             self.correctoincorrecto = "Correcto"
+            self.colorborder = "lightgreen"
         else:
             self.correctoincorrecto = "Has metido la pata"
+            self.colorborder = "red"
 
     blursalidaentrada=100
 

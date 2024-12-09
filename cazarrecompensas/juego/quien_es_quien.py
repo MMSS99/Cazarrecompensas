@@ -18,8 +18,16 @@ def action_bar() -> rx.Component:
         ),
         justify="center",
         align="center",
-        min_width="75%"
+        min_width="75%",
+        
+            
     )
+
+def volver_al_menu() -> rx.Component:
+    return rx.button(
+                    "Volver al menú",
+                    on_click=State.salida("/"),
+                ),
 
 def juego():
     return rx.box(
@@ -38,13 +46,14 @@ def juego():
                     gap="5px",
                     align="center",
                     margin_bottom="20px",
-                    
+                    margin_top="20px"
                     ),
                 
                 
 
             
                 action_bar(),
+                rx.vstack(volver_al_menu(), justify="center", align_items="center", margin_top="20px"),
                 on_mount=State.nuevapartida,
                 width="60vw",
                 height="60vh",
@@ -53,16 +62,17 @@ def juego():
                 
                 
                 ),
+            
             ),
             rx.vstack(
                 rx.box(
                     rx.text( #Post-partida
-                        f"{State.correctoincorrecto}, el personaje a adivinar era... ",
+                        rx.text.strong(f"{State.correctoincorrecto}", color=State.colorborder),
+                        ", el personaje a adivinar era... ",
                         rx.text.strong(f"{State.personaje_a_adivinar}"),
 
                         font_size="1em",
                         high_contrast=True,
-                        align="centre"
                     ),
                     rx.text(
                         rx.text.em(f"Intentos: {State.contador_de_intentos}"),
@@ -81,7 +91,7 @@ def juego():
                     
 
                 ),
-                rx.image(src=f"../pj{State.personaje_a_adivinar}.jpg"),
+                rx.image(src=f"../pj{State.personaje_a_adivinar}.jpg", border="solid", border_color=State.colorborder, border_radius="20px", border_width="thick"),
                 rx.button(
                     on_click=State.reiniciar_partida,
 
@@ -94,6 +104,7 @@ def juego():
                     on_mouse_enter= State.botonnuevapartidadentro,
                     on_mouse_leave=  State.botonnuevapartidafuera
                 ),
+                volver_al_menu(),
                 min_width="100vh",
                 padding="20px",
                 align="center",
@@ -101,12 +112,8 @@ def juego():
             ),
 
             
-            ),
-            rx.button(
-            "Volver al menú",
-            on_click=State.salida("/"),
-            aling="center"
         ),
+            
         
         on_mount=State.entradaapagina,
         background="center/cover url('../fondoprueba.jpg')",
