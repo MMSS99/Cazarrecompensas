@@ -25,7 +25,7 @@ def juego():
     return rx.box(
         rx.cond(
             State.enpartida,        
-            rx.vstack( 
+            rx.vstack( #Grid de partida
                 rx.box(
                     rx.grid(
                         rx.foreach(
@@ -55,7 +55,7 @@ def juego():
                 ),
             ),
             rx.vstack(
-                rx.text(
+                rx.text( #Post-partida
                     f"{State.correctoincorrecto}, el personaje a adivinar era...{State.personaje_a_adivinar}",
 
                     font_size="1em"
@@ -65,6 +65,18 @@ def juego():
                     font_size="1em"
                 ),
                 rx.image(src=f"../pj{State.personaje_a_adivinar}.jpg"),
+                rx.button(
+                    on_click=State.reiniciar_partida,
+
+                    background_image="url('../btnNuevaPartida.png')",
+                    background_color="transparent",
+                    width="380px",
+                    height="60px",
+
+                    scale= State.scalebtnnuevapartida,
+                    on_mouse_enter= State.botonnuevapartidadentro,
+                    on_mouse_leave=  State.botonnuevapartidafuera
+                ),
                 min_width="100vh",
                 padding="20px",
                 align="center",

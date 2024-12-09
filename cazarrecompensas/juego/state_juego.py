@@ -35,6 +35,10 @@ class State_juego(rx.State):
     enpartida = True
     correctoincorrecto = ""
 
+    def reiniciar_partida(self):
+        self.enpartida = True
+        self.nuevapartida()
+
     def adivinar(self, personaje):
         self.enpartida = False
         if personaje == self.personaje_a_adivinar:
@@ -57,5 +61,13 @@ class State_juego(rx.State):
             self.blursalidaentrada += 1
             yield
         yield rx.redirect(direccion)
+
+    scalebtnnuevapartida=1.0
+
+    def botonnuevapartidadentro(self):
+        self.scalebtnnuevapartida = 1.07
+
+    def botonnuevapartidafuera(self):
+        self.scalebtnnuevapartida = 1.0
 
 
