@@ -83,7 +83,7 @@ def juego():
             rx.vstack(
                 rx.box(
                     rx.text( #Post-partida
-                        rx.text.strong(f"{State.correctoincorrecto}", color=State.colorborder),
+                        rx.text.strong(f"{State.correctoincorrecto}", color=State.colorborder, high_contrast=True),
                         ", el personaje a adivinar era... ",
                         rx.text.strong(f"{State.personaje_a_adivinar}"),
 
@@ -91,7 +91,7 @@ def juego():
                         high_contrast=True,
                     ),
                     rx.text(
-                        rx.text.em(f"Intentos: {State.contador_de_intentos}"),
+                        rx.text.em(f"Preguntas: {State.contador_de_intentos}"),
                         font_size="0.7em",
                         high_contrast=True,
                         align="centre"
@@ -107,7 +107,7 @@ def juego():
                     
 
                 ),
-                rx.image(src=f"../pj{State.personaje_a_adivinar}.jpg", border="solid", border_color=State.colorborder, border_radius="20px", border_width="thick"),
+                rx.image(src=f"../pj{State.personaje_a_adivinar}.jpg", border="solid", border_color=State.colorborder, border_radius="20px", border_width="thick", max_height="400px", width="auto"),
                 rx.button(
                     on_click=State.reiniciar_partida,
 
