@@ -66,7 +66,6 @@ class State_juego(rx.State):
         yield rx.redirect(direccion)
 
     scalebtnnuevapartida=1.0
-
     def botonnuevapartidadentro(self):
         self.scalebtnnuevapartida = 1.07
 
@@ -74,11 +73,17 @@ class State_juego(rx.State):
         self.scalebtnnuevapartida = 1.0
 
     scalebtnvolveralmenu=1.0
-
     def botonvolveralmenudentro(self):
         self.scalebtnvolveralmenu = 1.07
 
     def botonvolveralmenufuera(self):
         self.scalebtnvolveralmenu = 1.0
+
+    scalebtncomprobar=1.0
+    def botoncomprobardentro(self):
+        self.scalebtncomprobar = 1.07
+
+    def botoncomprobarfuera(self):
+        self.scalebtncomprobar = 1.0
 
 

@@ -13,8 +13,16 @@ def action_bar() -> rx.Component:
             
         ),
         rx.button(
-            "Comprobar",
-            on_click=State.comparar_caracetristicas
+            on_click=State.comparar_caracetristicas,
+
+            background_image="url('../btnComprobar.png')",
+            background_color="transparent",
+            width="140px",
+            height="55px",
+
+            scale= State.scalebtncomprobar,
+            on_mouse_enter= State.botoncomprobardentro,
+            on_mouse_leave=  State.botoncomprobarfuera
         ),
         justify="center",
         align="center",
@@ -53,7 +61,7 @@ def juego():
                     columns="8",
                     gap="5px",
                     align="center",
-                    margin_bottom="20px",
+                    margin_bottom="12px",
                     margin_top="20px"
                     ),
                 
@@ -61,7 +69,7 @@ def juego():
 
             
                 action_bar(),
-                rx.vstack(volver_al_menu(), justify="center", align_items="center", margin_top="20px"),
+                rx.vstack(volver_al_menu(), justify="center", align_items="center", margin_top="12px"),
                 on_mount=State.nuevapartida,
                 width="60vw",
                 height="60vh",
