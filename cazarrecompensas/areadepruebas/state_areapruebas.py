@@ -1,15 +1,16 @@
 import reflex as rx
 import asyncio
+import random
 import time
 from ..juego import personajes_aleatorios
-from ..juego.comprobador_caracteristicas import comprobar_caracteristicas
+from ..juego.partida.comprobador_caracteristicas import comprobar_caracteristicas
 
 class Statepruebas(rx.State):
     personaje=""
     caracteristica = ""
     caracteristica_visor = ""
     def generar_personaje(self):
-        self.personaje = personajes_aleatorios()
+        self.personaje = random.choice(personajes_aleatorios())
     def actualizar_caracteristica(self, caracteristica):
         self.caracteristica = caracteristica
     def actualizar_caracteristicavisor (self):

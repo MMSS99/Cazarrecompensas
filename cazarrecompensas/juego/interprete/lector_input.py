@@ -22,6 +22,5 @@ def lector_entrada(entrada: str):
     if clave and not valor:
         valor.append(True)
 
-    print (clave, valor, negativo)
     return clave, valor, negativo
 

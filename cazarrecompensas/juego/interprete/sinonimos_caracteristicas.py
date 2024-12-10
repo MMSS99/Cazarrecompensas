@@ -8,7 +8,7 @@ SINONIMOS_CLAVES = {
     ("perilla", "patillas", "barba") : "barba",
     ("mostacho", "bigote") : "bigote",
     ("joyeria", "accesorios", "pendiente", "pendientes") : "pendientes",
-    ("genero", "apariencia", "sexo") : "sexo",
+    ("genero", "apariencia", "sexo", "varón", "varon", "señor", "varon", "chico", "hombre", "fémina", "femina", "señora", "femina", "chica", "mujer") : "sexo",
     ("carrillo", "moflete", "pomulo", "cachete", "carrillo", "carrillos", "mofletes", "pomulos", "cachetes", "mejillas", "mejilla") : "mejilla",
     ("boca", "labios", "labio") : "boca",
     ("nariz", "napia") : "nariz",

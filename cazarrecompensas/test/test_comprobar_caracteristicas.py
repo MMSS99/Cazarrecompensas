@@ -1,5 +1,5 @@
 import pytest
-from cazarrecompensas.juego.comprobador_caracteristicas import comprobar_caracteristicas
+from cazarrecompensas.juego.partida.comprobador_caracteristicas import comprobar_caracteristicas
 
 @pytest.mark.parametrize ("personaje, entrada, resultado", 
                           [("Susan", "Tiene el pelo blanco", "Si"),
