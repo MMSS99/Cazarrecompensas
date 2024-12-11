@@ -12,12 +12,12 @@ def comprobar_caracteristicas(personaje : str, entrada : str):
         if valor_entrada == PERSONAJES[personaje][clave_entrada]:
             if es_negativo == False:
                 return "Si"
-            if es_negativo == True:
+            else:
                 return "No"
         else:
             if es_negativo == True:
                 return "Si"
-            if es_negativo == False:
+            else:
                 return "No"
     except IndexError:
         return "No sé cómo responder a eso"
