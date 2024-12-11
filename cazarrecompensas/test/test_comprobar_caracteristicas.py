@@ -12,5 +12,6 @@ from cazarrecompensas.juego.partida.comprobador_caracteristicas import comprobar
                            ("David", "5429875", "No sé cómo responder a eso")
                            ])
 
+@pytest.mark.integracion
 def test_comprobar_caracteristicas(personaje, entrada, resultado):
     assert comprobar_caracteristicas(personaje, entrada) == resultado

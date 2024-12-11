@@ -9,5 +9,6 @@ from ..juego.interprete.lector_input import lector_entrada
                          ("No tiene ojos", ["ojos"], [True], True),
                          ("¿No tiene el PELO 84297968247 rojo?", ["pelo"], ["rojo"], True)])
 
+@pytest.mark.integracion
 def test_lector(entrada, clave, valor, negativo):
     assert lector_entrada(entrada) == (clave, valor, negativo)

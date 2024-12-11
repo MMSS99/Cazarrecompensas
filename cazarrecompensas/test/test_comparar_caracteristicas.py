@@ -8,5 +8,6 @@ from ..juego.partida.comparador_caracteristicas import comparador_caracteristica
                            (["Susan", "Herman", "Bill", "Richard", "EricNO"], "Tom", "No tiene barba", ["Susan", "Herman", "BillNO", "RichardNO", "EricNO"]),
                            ])
 
+@pytest.mark.integracion
 def test_comparar_caracteristicas(listapj, pjaadivinar, entrada, listaresultante):
     assert comparador_caracteristicas(listapj, pjaadivinar, entrada) == listaresultante

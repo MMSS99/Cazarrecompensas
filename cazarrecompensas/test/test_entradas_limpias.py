@@ -8,5 +8,6 @@ from cazarrecompensas.juego.interprete.limpiador_entrada import limpiador_entrad
                            ("VALLE     CAS", "valle     cas")
                            ])
 
+@pytest.mark.unidad
 def test_entradaslimpias(entrada, salida):
     assert limpiador_entrada(entrada) == salida

@@ -6,6 +6,7 @@ from cazarrecompensas.juego.interprete.estandarizador_valores import estandariza
                           ("pelirrojo", "rojo"),
                           ])
 
+@pytest.mark.integracion
 def test_valores_estandares(valor, sinonimovalor):
     assert estandarizador_valores(valor) == sinonimovalor
 
@@ -16,5 +17,6 @@ def test_valores_estandares(valor, sinonimovalor):
                           ("calvo", "entradas")
                           ])
 
+@pytest.mark.integracion
 def test_claves_estandares(clave, sinonimoclave):
     assert estandarizador_claves(clave) == sinonimoclave
