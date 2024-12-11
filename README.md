@@ -263,13 +263,21 @@ El resto de los módulos de la lógica contienen dependencias entre ellos:
 
 
 # Análisis del tiempo invertido
+**La información mostrada en los gráficos carece el nivel de precisión deseado,** ya que en muchas ocasiones realizamos trabajo trasversal en forma de spikes. **En la carpeta [Wakatime](assets/docs/wakatime/) hemos incluido capturas de nuestros registros de *Wakatime***, también terriblemente imprecisos por su forma de registrar la actividad (dejando atrás tiempo pasado navegando documentación, teorizando o creando componentes fuera de VS Code).
+
+No recomendamos el uso de esta herramienta para futuros proyectos.
 ## Gráfico conjunto (Wakatime)
+
+![Diagrama de horas](assets/docs/tiempoconsumido.png)
+![Rosco de horas](assets/docs/roscohoras.png)
 
 ## Justificación temporal
 
+![Justificación temporal](assets/docs/predicciontiempo.png)
+
 - **Predicción**: 69 tokens (17 horas)
 
-- **Real**: 188 tokens (47 horas)
+- **Real**: 197 tokens (49 horas)
 
 <sub> (**Debido al desconocimineto del framework, la predicción de tiempo es extremadamente inexacta**. Tareas que fueron predecidas a 2 tokens basándonos en conocimientos previos han llegado a consumir 20 en su implementación real.)
 
