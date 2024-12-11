@@ -247,10 +247,19 @@ El frontend se encuentra escrito en *Python* a través del framework *Reflex*, q
 # Pruebas
 
 ## Coverage
-![Coverage](assets/coverage.png)
+![Coverage](assets/docs/coverage.png)
+
+<sub>(Un test fue añadido a posteriori para alcanzar el 100% de cobertura en los módulos de lógica, ya que su contenido no fue contemplado durante el desarrollo.) -> [Commit 6edcd23](https://github.com/MMSS99/Cazarrecompensas/commit/664d2a4d6450bc9771af91063ed9f67f64f13484)
+
 ## Test de unidad
+Sólamente contamos con dos módulos independientes: `limpiador_entrada.py` y `personajes_aleatorios.py`.
+
+![Tests de unidad](assets/docs/testsunidad.png)
 
 ## Test de integración
+El resto de los módulos de la lógica contienen dependencias entre ellos:
+
+![Tests de integración](assets/docs/testintegracion.png)
 
 
 # Análisis del tiempo invertido
@@ -260,13 +269,20 @@ El frontend se encuentra escrito en *Python* a través del framework *Reflex*, q
 
 
 # Conclusiones
+El **trabajar con un framework es una experiencia interesante, pero intimidante** cuando la evaluación de un trimestre de iniciación a la programación depende de ello. Por fortuna, contábamos con los conocimientos previos necesarias para *coger al proyecto por los cuernos*. 
 
+**Reflex, en si, puede ser frustrante** a la hora de preparar sus componentes y sus estilos, ya que como su compilación a otros lenguajes es automática, el grado de control sobre ellos es entre bajo y nulo. Creemos que es una clara demostración de las limitaciones y beneficios que un *framework* impone. 
 
 ## Posibles mejoras
-- Implementacion de una Scoreboard donde se reflejen los mejores intentos
-- Seguimiento de las preguntas ya realizadas y atributos descartados para asegurar la coherencia en el juego.
+- **Implementacion de una *Scoreboard*** donde se reflejen los mejores intentos, los cuales sean guardados entre lanzamientos de *Reflex*.
+
+- **Seguimiento de las preguntas ya realizadas** y atributos descartados para asegurar la coherencia en el juego.
+
+- **Denegar la capacidad de adivinar a un personaje ya eliminado.**
 
 ## Dificultades
-No hemos experimentado grandes dificultades mas allá de trabajar por primera vez con Reflex ya que no consiste en una logica elabroada, si no mas bien en algo divertido y funcional
+No hemos experimentado grandes dificultades (mas allá de trabajar por primera vez con Reflex) ya que no consiste en una logica elaborada, si no mas bien en algo divertido y funcional. 
 
-Redacción del README.
+**Falta de tiempo en clase, truncado por explicaciones poco relevantes** para el estado de nuestro proyecto, provocó que nuestro ritmo de trabajo se descompasase: los mayores avances se dieron trabajando de forma remota.
+
+<sub>... Y también, la redacción de la documentación del proyecto, cuyos apartados pedían información que generó confusión, tomó mucho más de lo esperado.
