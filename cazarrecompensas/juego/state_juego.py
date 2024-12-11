@@ -1,7 +1,6 @@
 import reflex as rx
 import random, time, asyncio
 from .partida.personajes_aleatorios import personajes_aleatorios
-from ..juego.partida.comprobador_caracteristicas import comprobar_caracteristicas
 from ..juego.partida.comparador_caracteristicas import comparador_caracteristicas
 
 class State_juego(rx.State):
