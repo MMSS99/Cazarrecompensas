@@ -1,4 +1,4 @@
-# Quién es Quién - Proyecto en Reflex de 
+# Cazarrecompensas (Quién es Quién)
 
 
 ## Tabla de Contenidos
@@ -298,4 +298,4 @@ No hemos experimentado grandes dificultades (mas allá de trabajar por primera v
 
 **Falta de tiempo en clase, truncado por explicaciones poco relevantes** para el estado de nuestro proyecto, provocó que nuestro ritmo de trabajo se descompasase: los mayores avances se dieron trabajando de forma remota.
 
-<sub>... Y también, la redacción de la documentación del proyecto, cuyos apartados pedían información que generó confusión, tomó mucho más de lo esperado.
+<sub>... Y también, la redacción de la documentación del proyecto cuyos apartados pedían información que generó confusión tomó mucho más de lo esperado.
