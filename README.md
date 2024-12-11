@@ -162,6 +162,7 @@ A continuación aparecerán enlaces a el Proyecto de Github asociado a la aplica
     - *Time* <sub>(librería utilizada para esperas en bucles)
     - *Asyncio* <sub>(librería utilizada para código que requería constante actualización de las variables involucradas durante su ejecución)
 - [Adobe Photoshop 2023](https://www.adobe.com/products/photoshop.html) <sub>(Creación de estilo de componentes y gráficos de documentación)
+- [Canva](https://www.canva.com/) <sub> (Creación de gráficos de tiempo)
 - [Git](https://git-scm.com) y *Github* <sub>(Control de versiones)
 - *Markdown* <sub>(Lo que estás leyendo)
 
