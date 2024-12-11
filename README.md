@@ -263,10 +263,15 @@ El resto de los módulos de la lógica contienen dependencias entre ellos:
 
 
 # Análisis del tiempo invertido
-## Clockify + Wakatime
+## Gráfico conjunto (Wakatime)
 
 ## Justificación temporal
 
+- **Predicción**: 69 tokens (17 horas)
+
+- **Real**: 188 tokens (47 horas)
+
+<sub> (**Debido al desconocimineto del framework, la predicción de tiempo es extremadamente inexacta**. Tareas que fueron predecidas a 2 tokens basándonos en conocimientos previos han llegado a consumir 20 en su implementación real.)
 
 # Conclusiones
 El **trabajar con un framework es una experiencia interesante, pero intimidante** cuando la evaluación de un trimestre de iniciación a la programación depende de ello. Por fortuna, contábamos con los conocimientos previos necesarias para *coger al proyecto por los cuernos*. 
