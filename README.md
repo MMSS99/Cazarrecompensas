@@ -307,7 +307,7 @@ No hemos experimentado grandes dificultades (mas allá de trabajar por primera v
  a 13 de Diciembre de 2024.
 
 ### ¿Qué herramienta de IA generativa usaste (nombre y versión)?
-- `ChatGPT`, versión desconocida.
+- `ChatGPT`, versión GPT-4.
 
 ### ¿Qué tipos de prompts proporcionaste?
 - `Texto simple`
