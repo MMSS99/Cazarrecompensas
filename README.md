@@ -28,6 +28,7 @@
 17. [Conclusiones](#conclusiones)
 18. [Posibles mejoras](#posibles-mejoras)
 19. [Dificultades](#dificultades)
+20. [Uso de Inteligencia Artificial](#uso-de-inteligencia-artificial)
 
 ---
 
@@ -300,3 +301,20 @@ No hemos experimentado grandes dificultades (mas allá de trabajar por primera v
 **Falta de tiempo en clase, truncado por explicaciones poco relevantes** para el estado de nuestro proyecto, provocó que nuestro ritmo de trabajo se descompasase: los mayores avances se dieron trabajando de forma remota.
 
 <sub>... Y también, la redacción de la documentación del proyecto cuyos apartados pedían información que generó confusión tomó mucho más de lo esperado.
+
+# Uso de Inteligencia Artificial
+> <sub> Redactado por [Marcelo](https://github.com/MMSS99), quien está en contra del uso de la IA en el ámbito educacional.
+ a 13 de Diciembre de 2024.
+
+### ¿Qué herramienta de IA generativa usaste (nombre y versión)?
+- `ChatGPT`, versión desconocida.
+
+### ¿Qué tipos de prompts proporcionaste?
+- `Texto simple`
+### ¿Para qué usaste la herramienta?
+- Apoyo al aprendizaje de *Reflex* <sub>(funcionamiento de componentes, colocación de estilos...)
+
+### ¿Cómo has utilizado o cambiado la salida de la IA generativa?
+De ninguna manera: **toda la información obtenida de ChatGPT fue suplantada por una información de mayor calidad obtenida directamente de las fuentes ofrecidas por Reflex en sus páginas de documentación**. No existe ninguna permanencia en el código recogido en este repositorio de influencias de Inteligencia Artificial.
+
+<sub> ... En este repo, apostamos por un código *artesano*.
