@@ -94,7 +94,7 @@ def juego():
                         rx.text.em(f"Preguntas: {State.contador_de_intentos}"),
                         font_size="0.7em",
                         high_contrast=True,
-                        align="centre"
+                        align="center"
                     ),
 
                     background="radial-gradient(circle, rgba(94,33,13,0.5004202364539565) 0%, rgba(121,30,9,0.5032213569021359) 46%, rgba(135,69,0,0.5116247182466737) 100%)",
